@@ -4,7 +4,7 @@ import json
 url = "https://maplehack2.canadacentral.inference.ml.azure.com/v1/chat/completions"
 headers = {
     "Content-Type": "application/json",
-    "Authorization": "Bearer 5IFsKwOwX6FjOpkQgg0Wol3AfRmR6MI24w5U4E445Mu9IZvVA6aQJQQJ99BBAAAAAAAAAAAAINFRAZMLNXQP"
+    "Authorization": "Bearer <token>"
 }
 data = {
     "model": "microsoft/Phi-3-mini-4k-instruct",
