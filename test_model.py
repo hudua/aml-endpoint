@@ -1,15 +1,19 @@
 import requests
+import json
 
-url = "https://vllm-hf-2.canadaeast.inference.ml.azure.com/"
+url = "https://maplehack2.canadacentral.inference.ml.azure.com/v1/chat/completions"
 headers = {
     "Content-Type": "application/json",
-    "Authorization": "Bearer xxxxxxxxxxxx"
+    "Authorization": "Bearer 5IFsKwOwX6FjOpkQgg0Wol3AfRmR6MI24w5U4E445Mu9IZvVA6aQJQQJ99BBAAAAAAAAAAAAINFRAZMLNXQP"
 }
 data = {
-    "model": "Noumaan/phi3-mini-128k-instruct-4bit-quantized",
-    "prompt": "San Francisco is a",
-    "max_tokens": 200,
-    "temperature": 0.7
+    "model": "microsoft/Phi-3-mini-4k-instruct",
+    "messages": [
+			{
+				"role": "user",
+				"content": "What is the capital of France?"
+			}
+		]
 }
 
 response = requests.post(url, headers=headers, json=data)
